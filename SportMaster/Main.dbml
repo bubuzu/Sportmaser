@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="sportmaster" Class="MainDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=LUCKY-PC;Initial Catalog=sportmaster;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="sportmasterConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Offers" Member="Offers">
+    <Type Name="Offer">
+      <Column Name="vk_uid" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="vk_sid" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="vk_lead_id" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="vk_hash" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="cdate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spAddPost" Method="spAddPost">
+    <Parameter Name="uid" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="social" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="pic" Type="System.String" DbType="VarChar(128)" />
+    <Parameter Name="fname" Type="System.String" DbType="NVarChar(128)" />
+    <Parameter Name="lname" Type="System.String" DbType="NVarChar(128)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spSharePost" Method="spSharePost">
+    <Parameter Name="uid" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="social" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="pic" Type="System.String" DbType="VarChar(128)" />
+    <Parameter Name="postuid" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spAddUser" Method="spAddUser">
+    <Parameter Name="uid" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="social" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="fname" Type="System.String" DbType="NVarChar(128)" />
+    <Parameter Name="lname" Type="System.String" DbType="NVarChar(128)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spAddOffer" Method="spAddOffer">
+    <Parameter Name="vk_uid" Type="System.String" DbType="NVarChar(256)" />
+    <Parameter Name="vk_sid" Type="System.String" DbType="NVarChar(256)" />
+    <Parameter Name="vk_lead_id" Type="System.String" DbType="NVarChar(256)" />
+    <Parameter Name="vk_hash" Type="System.String" DbType="NVarChar(256)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spAddStatistic" Method="spAddStatistic">
+    <Parameter Name="uid" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="social" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="ev" Type="System.String" DbType="VarChar(25)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

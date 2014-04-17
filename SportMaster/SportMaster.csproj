@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3F9DE852-CA71-4E2C-9F31-B60C698316D6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SportMaster</RootNamespace>
+    <AssemblyName>SportMaster</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44300</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.8.2\lib\net40\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.8.24\lib\net40\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.1.0.1\lib\net40\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.0\lib\net40\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="FindFirendBg.jpg" />
+    <Content Include="Finish.aspx" />
+    <Content Include="fonts\Coheadrg\coheadline_corp_rg.css" />
+    <Content Include="fonts\Coheadrg\coheadline_corp_rg.svg" />
+    <Content Include="fonts\Cohead\coheadline_corp.css" />
+    <Content Include="fonts\Cohead\coheadline_corp.svg" />
+    <Content Include="fonts\CoTextrg\cotext_corp_rg.css" />
+    <Content Include="fonts\CoTextrg\cotext_corp_rg.svg" />
+    <Content Include="fonts\CoText\cotext_corp.css" />
+    <Content Include="fonts\CoText\cotext_corp.svg" />
+    <Content Include="Images\arrows\LArrow.png" />
+    <Content Include="Images\arrows\LArrow_c.png" />
+    <Content Include="Images\arrows\LArrow_disable.png" />
+    <Content Include="Images\arrows\LArrow_h.png" />
+    <Content Include="Images\arrows\RArrow.png" />
+    <Content Include="Images\arrows\RArrow_c.png" />
+    <Content Include="Images\arrows\RArrow_disable.png" />
+    <Content Include="Images\arrows\RArrow_h.png" />
+    <Content Include="Images\back\back.png" />
+    <Content Include="Images\back\back_click.png" />
+    <Content Include="Images\back\back_hover.png" />
+    <Content Include="Images\btnOk_hover.png" />
+    <Content Include="Images\constructor\final\beard\f2b.png" />
+    <Content Include="Images\constructor\final\beard\f2g.png" />
+    <Content Include="Images\constructor\final\beard\f2w.png" />
+    <Content Include="Images\constructor\final\beard\s2b.png" />
+    <Content Include="Images\constructor\final\beard\s2g.png" />
+    <Content Include="Images\constructor\final\beard\s2w.png" />
+    <Content Include="Images\constructor\final\eye\1br.png" />
+    <Content Include="Images\constructor\final\eye\1gr.png" />
+    <Content Include="Images\constructor\final\eye\2br.png" />
+    <Content Include="Images\constructor\final\eye\3br.png" />
+    <Content Include="Images\constructor\final\glass\2.png" />
+    <Content Include="Images\constructor\final\glass\3.png" />
+    <Content Include="Images\constructor\final\hair\4w.png" />
+    <Content Include="Images\constructor\final\hair\4g.png" />
+    <Content Include="Images\constructor\final\hair\4b.png" />
+    <Content Include="Images\constructor\final\head\3.png" />
+    <Content Include="Images\constructor\final\head\2.png" />
+    <Content Include="Images\constructor\final\head\1.png" />
+    <Content Include="Images\constructor\menu\glass\1.png" />
+    <Content Include="Images\constructor\menu\glass\2.png" />
+    <Content Include="Images\constructor\menu\glass\3.png" />
+    <Content Include="Images\constructor\menu\hair\4.png" />
+    <Content Include="Images\constructor\menu\head\2.png" />
+    <Content Include="Images\constructor\menu\head\1.png" />
+    <Content Include="Images\constructor\menu\head\3.png" />
+    <Content Include="Images\Contstructor.jpg" />
+    <Content Include="Images\ErrorSendBg.png" />
+    <Content Include="Images\final\1.png" />
+    <Content Include="Images\final\2.png" />
+    <Content Include="Images\final\6.png" />
+    <Content Include="Images\final\_2.png" />
+    <Content Include="Images\final\3.png" />
+    <Content Include="Images\final\4.png" />
+    <Content Include="Images\final\5.png" />
+    <Content Include="Images\final\_6.png" />
+    <Content Include="Images\final\7.png" />
+    <Content Include="Images\final\8.png" />
+    <Content Include="Images\onemore\onemore.png" />
+    <Content Include="Images\picker\down.png" />
+    <Content Include="Images\picker\down_hover.png" />
+    <Content Include="Images\picker\gray.png" />
+    <Content Include="Images\picker\red.png" />
+    <Content Include="Images\constructor\final\beard\f1b.png" />
+    <Content Include="Images\constructor\final\beard\f1g.png" />
+    <Content Include="Images\constructor\final\beard\f1w.png" />
+    <Content Include="Images\constructor\final\beard\f3b.png" />
+    <Content Include="Images\constructor\final\beard\f3g.png" />
+    <Content Include="Images\constructor\final\beard\f3w.png" />
+    <Content Include="Images\constructor\final\beard\f4b.png" />
+    <Content Include="Images\constructor\final\beard\f4g.png" />
+    <Content Include="Images\constructor\final\beard\f4w.png" />
+    <Content Include="Images\constructor\final\beard\n1b.png" />
+    <Content Include="Images\constructor\final\beard\n1g.png" />
+    <Content Include="Images\constructor\final\beard\n1w.png" />
+    <Content Include="Images\constructor\final\beard\n2b.png" />
+    <Content Include="Images\constructor\final\beard\n2g.png" />
+    <Content Include="Images\constructor\final\beard\n2w.png" />
+    <Content Include="Images\constructor\final\beard\n3b.png" />
+    <Content Include="Images\constructor\final\beard\n3g.png" />
+    <Content Include="Images\constructor\final\beard\n3w.png" />
+    <Content Include="Images\constructor\final\beard\n4b.png" />
+    <Content Include="Images\constructor\final\beard\n4g.png" />
+    <Content Include="Images\constructor\final\beard\n4w.png" />
+    <Content Include="Images\constructor\final\beard\s1b.png" />
+    <Content Include="Images\constructor\final\beard\s1g.png" />
+    <Content Include="Images\constructor\final\beard\s1w.png" />
+    <Content Include="Images\constructor\final\beard\s3b.png" />
+    <Content Include="Images\constructor\final\beard\s3g.png" />
+    <Content Include="Images\constructor\final\beard\s3w.png" />
+    <Content Include="Images\constructor\final\beard\s4b.png" />
+    <Content Include="Images\constructor\final\beard\s4g.png" />
+    <Content Include="Images\constructor\final\beard\s4w.png" />
+    <Content Include="Images\constructor\final\brow\1b.png" />
+    <Content Include="Images\constructor\final\brow\1g.png" />
+    <Content Include="Images\constructor\final\brow\1w.png" />
+    <Content Include="Images\constructor\final\brow\2b.png" />
+    <Content Include="Images\constructor\final\brow\2g.png" />
+    <Content Include="Images\constructor\final\brow\2w.png" />
+    <Content Include="Images\constructor\final\brow\3b.png" />
+    <Content Include="Images\constructor\final\brow\3g.png" />
+    <Content Include="Images\constructor\final\brow\3w.png" />
+    <Content Include="Images\constructor\final\eye\1bl.png" />
+    <Content Include="Images\constructor\final\eye\1gra.png" />
+    <Content Include="Images\constructor\final\eye\2bl.png" />
+    <Content Include="Images\constructor\final\eye\2gr.png" />
+    <Content Include="Images\constructor\final\eye\2gra.png" />
+    <Content Include="Images\constructor\final\eye\3bl.png" />
+    <Content Include="Images\constructor\final\eye\3gr.png" />
+    <Content Include="Images\constructor\final\eye\3gra.png" />
+    <Content Include="Images\constructor\final\glass\1.png" />
+    <Content Include="Images\constructor\final\hair\1b.png" />
+    <Content Include="Images\constructor\final\hair\1g.png" />
+    <Content Include="Images\constructor\final\hair\1w.png" />
+    <Content Include="Images\constructor\final\hair\2b.png" />
+    <Content Include="Images\constructor\final\hair\2g.png" />
+    <Content Include="Images\constructor\final\hair\2w.png" />
+    <Content Include="Images\constructor\final\hair\f3b.png" />
+    <Content Include="Images\constructor\final\hair\f3g.png" />
+    <Content Include="Images\constructor\final\hair\f3w.png" />
+    <Content Include="Images\constructor\final\hair\n3b.png" />
+    <Content Include="Images\constructor\final\hair\n3g.png" />
+    <Content Include="Images\constructor\final\hair\n3w.png" />
+    <Content Include="Images\constructor\final\hair\s3b.png" />
+    <Content Include="Images\constructor\final\hair\s3g.png" />
+    <Content Include="Images\constructor\final\hair\s3w.png" />
+    <Content Include="Images\constructor\menu\beard\1.png" />
+    <Content Include="Images\constructor\menu\beard\2.png" />
+    <Content Include="Images\constructor\menu\beard\3.png" />
+    <Content Include="Images\constructor\menu\beard\4.png" />
+    <Content Include="Images\constructor\menu\brow\1.png" />
+    <Content Include="Images\constructor\menu\brow\2.png" />
+    <Content Include="Images\constructor\menu\brow\3.png" />
+    <Content Include="Images\constructor\menu\eye\1.png" />
+    <Content Include="Images\constructor\menu\eye\2.png" />
+    <Content Include="Images\constructor\menu\eye\3.png" />
+    <Content Include="Images\constructor\menu\hair\1.png" />
+    <Content Include="Images\constructor\menu\hair\2.png" />
+    <Content Include="Images\constructor\menu\hair\3.png" />
+    <Content Include="Images\FindFirendBg.jpg" />
+    <Content Include="Images\onemore\onemore_click.png" />
+    <Content Include="Images\onemore\onemore_hover.png" />
+    <Content Include="Images\picker\up.png" />
+    <Content Include="Images\picker\up_hover.png" />
+    <Content Include="Images\ReadyPageBg.jpg" />
+    <Content Include="Images\ready\ready.png" />
+    <Content Include="Images\ready\ready_hover.png" />
+    <Content Include="Images\ready\ready_unactive.png" />
+    <Content Include="Images\Send.jpg" />
+    <Content Include="Images\sendfriend\sf_click.png" />
+    <Content Include="Images\sendfriend\sf_hover.png" />
+    <Content Include="Images\self\self_click.png" />
+    <Content Include="Images\self\self_hover.png" />
+    <Content Include="Images\send\send.png" />
+    <Content Include="Images\send\send_click.png" />
+    <Content Include="Images\send\send_hover.png" />
+    <Content Include="Images\slider\ClearSelection.png" />
+    <Content Include="Images\slider\ItemFrame.png" />
+    <Content Include="Images\slider\ItemFrameSelected.png" />
+    <Content Include="Images\start_down.png" />
+    <Content Include="Images\start_hover.png" />
+    <Content Include="Images\userFrame.png" />
+    <Content Include="Images\Start.jpg" />
+    <Content Include="Redirect.aspx" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\picker.js" />
+    <Content Include="Scripts\slider.js" />
+    <Content Include="Site.css" />
+    <Content Include="Constructor.aspx" />
+    <Content Include="Friends.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="ajax.ashx" />
+    <Content Include="Main.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Main.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="fonts\Cohead\coheadline_corp.eot" />
+    <Content Include="fonts\Cohead\coheadline_corp.ttf" />
+    <Content Include="fonts\Cohead\coheadline_corp.woff" />
+    <Content Include="fonts\Coheadrg\coheadline_corp_rg.eot" />
+    <Content Include="fonts\Coheadrg\coheadline_corp_rg.ttf" />
+    <Content Include="fonts\Coheadrg\coheadline_corp_rg.woff" />
+    <Content Include="fonts\CoText\cotext_corp.eot" />
+    <Content Include="fonts\CoText\cotext_corp.ttf" />
+    <Content Include="fonts\CoText\cotext_corp.woff" />
+    <Content Include="fonts\CoTextrg\cotext_corp_rg.eot" />
+    <Content Include="fonts\CoTextrg\cotext_corp_rg.ttf" />
+    <Content Include="fonts\CoTextrg\cotext_corp_rg.woff" />
+    <Content Include="fonts\CoHeadlineCorp.ttf" />
+    <None Include="Properties\PublishProfiles\normal.pubxml" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="SliderControl.ascx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ajax.ashx.cs">
+      <DependentUpon>ajax.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Constructor.aspx.cs">
+      <DependentUpon>Constructor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Constructor.aspx.designer.cs">
+      <DependentUpon>Constructor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Finish.aspx.cs">
+      <DependentUpon>Finish.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finish.aspx.designer.cs">
+      <DependentUpon>Finish.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Friends.ascx.cs">
+      <DependentUpon>Friends.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Friends.ascx.designer.cs">
+      <DependentUpon>Friends.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Main.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Main.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Redirect.aspx.cs">
+      <DependentUpon>Redirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Redirect.aspx.designer.cs">
+      <DependentUpon>Redirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SliderControl.ascx.cs">
+      <DependentUpon>SliderControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SliderControl.ascx.designer.cs">
+      <DependentUpon>SliderControl.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Genegated\" />
+    <Folder Include="Images\constructor\main\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Main.dbml.layout">
+      <DependentUpon>Main.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:10311/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'CoHeadlineCorpRegular';
+    src: url('coheadline_corp_rg.eot');
+    src: url('coheadline_corp_rg.eot') format('embedded-opentype'),
+         url('coheadline_corp_rg.woff') format('woff'),
+         url('coheadline_corp_rg.ttf') format('truetype'),
+         url('coheadline_corp_rg.svg#CoHeadlineCorpRegular') format('svg');
+}

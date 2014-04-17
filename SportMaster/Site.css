@@ -1,0 +1,729 @@
+﻿body {
+    margin: auto;
+}
+
+@font-face {
+    font-family: 'CoHeadlineCorpBold';
+    src: url('fonts/Cohead/coheadline_corp.eot');
+    src: url('fonts/Cohead/coheadline_corp.eot') format('embedded-opentype'),
+         url('fonts/Cohead/coheadline_corp.woff') format('woff'),
+         url('fonts/Cohead/coheadline_corp.ttf') format('truetype'),
+         url('fonts/Cohead/coheadline_corp.svg#CoHeadlineCorpBold') format('svg');
+}
+
+@font-face {
+    font-family: 'CoHeadlineCorpRegular';
+    src: url('fonts/Coheadrg/coheadline_corp_rg.eot');
+    src: url('fonts/Coheadrg/coheadline_corp_rg.eot') format('embedded-opentype'),
+         url('fonts/Coheadrg/coheadline_corp_rg.woff') format('woff'),
+         url('fonts/Coheadrg/coheadline_corp_rg.ttf') format('truetype'),
+         url('fonts/Coheadrg/coheadline_corp_rg.svg#CoHeadlineCorpRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'CoTextCorpBold';
+    src: url('fonts/CoText/cotext_corp.eot');
+    src: url('fonts/CoText/cotext_corp.eot') format('embedded-opentype'),
+         url('fonts/CoText/cotext_corp.woff') format('woff'),
+         url('fonts/CoText/cotext_corp.ttf') format('truetype'),
+         url('fonts/CoText/cotext_corp.svg#CoTextCorpBold') format('svg');
+}
+
+@font-face {
+    font-family: 'CoTextCorpRegular';
+    src: url('fonts/CoTextrg/cotext_corp_rg.eot');
+    src: url('fonts/CoTextrg/cotext_corp_rg.eot') format('embedded-opentype'),
+         url('fonts/CoTextrg/cotext_corp_rg.woff') format('woff'),
+         url('fonts/CoTextrg/cotext_corp_rg.ttf') format('truetype'),
+         url('fonts/CoTextrg/cotext_corp_rg.svg#CoTextCorpRegular') format('svg');
+}
+
+a:link {color:#2863cd}      /* unvisited link */
+a:visited {color:#2863cd}  /* visited link */
+a:hover {color:#2863cd}  /* mouse over link */
+a:active {color:#2863cd}  /* selected link */
+ 
+#MainDiv {
+    width: 800px;
+    height: 700px;
+    background-image: url(Images/Contstructor.jpg);
+    font-family: 'CoTextCorpBold';
+}
+
+#BackToGroup {
+    width: 171px;
+    height: 21px;
+    left: 621px;
+    top: 3px;
+    position: absolute;
+}
+
+#FinishDiv {
+    width: 800px;
+    height: 700px;
+    background-image: url(Images/Send.jpg);
+}
+
+#ImageHead {
+    width: 298px;
+    height: 425px;
+    position: relative;
+    top: 143px;
+    left: 16px;
+}
+
+#ImgHair {
+    width: 298px;
+    height: 425px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#ImgEye {
+    width: 298px;
+    height: 425px;
+    position: absolute;
+    top: 1px;
+    left: 0px;
+}
+
+#ImgBrow {
+    width: 298px;
+    height: 425px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#ImgBeard {
+    width: 298px;
+    height: 425px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#ImgGlass {
+    width: 298px;
+    height: 425px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#RemoveDiv {
+    width: 32px;
+    height: 32px;
+    top: 462px;
+    left: 458px;
+    position: absolute;
+    background-image: url('Images/slider/ClearSelection.png');
+    cursor: pointer;
+    z-index: 3;
+    display: block;
+}
+
+#LeftControlDiv {
+    width: 365px;
+    height: 210px;
+    background-color: darkkhaki;
+    position: relative;
+    top: -259px;
+    left: 399px;
+}
+
+#CategoryDiv {
+    width: 362px;
+    height: 27px;
+    position: absolute;
+    left: 392px;
+    top: 400px;
+}
+
+#SliderControlDiv {
+    width: 360px;
+    height: 177px;
+    position: absolute;
+    left: 394px;
+    top: 442px;
+}
+
+#GoFinish {
+    position: absolute;
+    top: 575px;
+    left: 55px;
+    height: 73px;
+    width: 215px;
+    background-image: url('Images/ready/ready_unactive.png');
+}
+
+#FriendNameText 
+{
+    width: 326px;
+    height: 30px;
+    top: 14px;
+    left: 28px;
+    position: absolute;
+    text-align: center;
+}
+
+#FriendNameValue
+{
+    width: 350px;
+    height: 45px;
+    top: 183px;
+    left: 400px;
+    position: absolute;
+    text-align: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: solid #c4c3bb 5px;
+}
+
+#txtFriend {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    width: 343px;
+    height: 43px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding-left: 5px;
+    font-size: 14pt;
+    color: #2863cd;
+    font-family: 'CoTextCorpBold';
+}
+
+
+#PickerDiv 
+{
+    width: 300px;
+    height: 45px;
+    top: 256px;
+    left: 399px;
+    position: absolute;
+    text-align: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: solid #c4c3bb 5px;
+    z-index: 2;
+    background-color: white;
+    overflow: hidden;
+}
+
+#PickerButton {
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    left: 260px;
+    position: absolute;
+    background-image: url('Images/picker/down.png');
+    cursor: pointer;
+}
+
+#PickerValue {
+    width: 239px;
+    height: 30px;
+    top: 7px;
+    left: 9px;
+    position: absolute;
+    font-size: 13pt;
+    color: #999;
+    text-align: left;
+    padding-top: 3px;
+}
+
+#PickerValues {
+    width: 280px;
+    height: 156px;
+    top: 48px;
+    left: 9px;
+    position: relative;
+    cursor: pointer;
+}
+
+.PickerItem {
+    width: 140px;
+    height: 25px;
+    float: left;
+    margin-top: 10px;
+}
+
+.PickerItemButton {
+    width: 20px;
+    height: 100%;
+    background-image: url('Images/picker/gray.png');
+    background-repeat: no-repeat;
+    background-position: 2px 6px;
+    float: left;
+}
+
+.PickerItemButton.selected {
+    background-image: url('Images/picker/red.png');
+}
+
+.PickerItemText {
+    width: 120px;
+    height: 100%;
+    float: left;
+    text-align: left;
+    font-size: 13pt;
+    color: #2863cd;
+}
+
+.PickerItemText.selected {
+    color: red;
+}
+
+
+#FinalImage {
+    width: 600px;
+    height: 400px;
+    left: 99px;
+    top: 181px;
+    position: absolute;
+}
+
+#ShareButton 
+{
+    position:absolute;
+    left:79px;
+    top:615px;
+    width:203px;
+    height:59px;
+    cursor:pointer;
+}
+
+#ShareSelfButton 
+{
+    position:absolute;
+    left:312px;
+    top:615px;
+    width:210px;
+    height:59px;
+    cursor:pointer;
+}
+
+#GoStartButton 
+{
+    position:absolute;
+    left:551px;
+    top:615px;
+    width:170px;
+    height:59px;
+    cursor:pointer;
+}
+
+.GoStartButtonOver {
+    background-image: url(Images/onemore/onemore_hover.png);
+}
+
+#SendBackgroud
+{
+  position: absolute; 
+  z-index: 15;
+  left: 0;
+  top: 165px;
+  bottom: 164px;
+  width: 800px;
+  height: 535px;
+  background-color: #FFF;
+}
+
+#FriendsBlock {
+    width: 800px;
+    height: 535px;
+    background-image: url(Images/FindFirendBg.jpg);
+    background-repeat: no-repeat;
+
+}
+
+#FriendFilter {
+    width: 130px;
+    height: 21px;
+    left: 317px;
+    top: 40px;
+    position: absolute;
+}
+
+#FriendPageCounter {
+    width: 73px;
+    height: 16px;
+    left: 364px;
+    top: 405px;
+    position: absolute;
+    color: white;
+    font-family: 'CoTextCorpRegular';
+    text-align: center;
+    border: none;
+    font-size: 10pt;
+}
+
+
+#Friends
+{
+    position:absolute;
+    left:161px;
+    top:71px;
+    width: 493px;
+    
+}
+
+#Friends .friend
+{
+    width:120px;
+    height:100px;
+    float:left;
+    padding-top: 10px;
+    background-repeat:no-repeat;
+}
+
+#Friends .friend .photo
+{
+    width:100px;
+    height:50px;
+    margin-top:5px;
+    margin-bottom:3px;
+    padding-left: 10px;
+    cursor:pointer;
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+
+#Friends .friend.selected
+{
+    margin-top:0;
+    margin-bottom:0;
+    background-image: url(Images/userFrame.png);
+}
+
+#Friends .friend .photo.selected
+{
+    margin-top:0;
+    margin-bottom:0;
+    margin-left:17px;
+    border: solid red 3px;
+}
+
+#Friends .friend .name
+{
+    text-align:center;
+    font-family:Arial;
+    font-size:11px;
+    color: black;
+}
+
+#FriendsCancelButton
+{
+    position:absolute;
+    left:175px;
+    top:455px;
+    width:160px;
+    height:59px;
+    background-image:url('Images/back/back.png');
+    cursor:pointer;
+}
+
+#FriendsSendButton
+{
+    position:absolute;
+    left:437px;
+    top:455px;
+    width:210px;
+    height:59px;
+    background-image:url('Images/send/send.png');
+    cursor:pointer;
+}
+
+#FriendsLeftArrow
+{
+    position:absolute;
+    left:90px;
+    top:189px;
+    width:46px;
+    height:67px;
+    cursor:pointer;
+    background-image: url('Images/arrows/LArrow.png');
+}
+
+#FriendsRightArrow
+{
+    position:absolute;
+    left:637px;
+    top:189px;
+    width:47px;
+    height:67px;
+    cursor:pointer;
+    background-image: url('Images/arrows/RArrow.png');
+}
+/*--------------- send error ---- */
+#ErrorBg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 800px;
+    height: 700px;
+    z-index: 1005;
+    background-color: black;
+    opacity:0.6;
+    filter:alpha(opacity=60); /* For IE8 and earlier */
+    display: none;
+}
+
+#ErrorImg {
+    width: 336px;
+    height: 212px;
+    z-index: 1006;
+    background-image: url('Images/ErrorSendBg.png');
+    left: 222px;
+    top: 231px;
+    position: absolute;
+    display: none;
+}
+
+#ErrorOk {
+    width: 123px;
+    height: 59px;
+    z-index: 1007; 
+    left: 107px;
+    top: 125px;
+    position: absolute;
+    background-image: url('Images/btnOk_hover.png');
+    cursor: pointer;
+   
+}
+
+#ErrorOkHover{
+    background-image: url(Images/btnOk_hover.png);
+    
+}
+
+
+/*----------------Ready div ---------------------------*/
+
+#ReadyDiv {
+    width: 800px;
+    height: 536px;
+    top: 164px;
+    left: 0px;
+    z-index: 30;
+    position: absolute;
+    background-image: url(Images/ReadyPageBg.jpg);
+    display: none;
+}
+
+#ReadyOneMore 
+{
+    position:absolute;
+    left:435px;
+    top:452px;
+    width:170px;
+    height:59px;
+    cursor:pointer;
+    z-index: 31;
+    background-image: url(Images/onemore/onemore.png)
+}
+
+#ReadyBack {
+    position:absolute;
+    left:175px;
+    top:452px;
+    width:160px;
+    height:59px;
+    z-index: 31;
+    background-image:url('Images/back/back.png');
+    cursor:pointer;
+}
+
+#ReadyHeader {
+    position:absolute;
+    left:103px;
+    top:137px;
+    width:588px;
+    height:40px;
+    text-align: center;
+
+    color: #2863cd;
+    font-family: 'CoHeadlineCorpBold';
+    font-size: 26pt;
+}
+
+#ReadyText {
+    position:absolute;
+    left:103px;
+    top:197px;
+    width:588px;
+    height:59px;
+    text-align: center;
+
+    color: #888888;
+    font-family: 'CoHeadlineCorpRegular';
+    font-size: 16pt;
+}
+
+
+.ReadyOneMoreOver {
+    background-image: url(Images/onemore/onemore_hover.png);
+}
+
+/*---------------Category ------------*/
+
+#CategoryMain 
+{
+    width: 360px;
+    height: 117px;
+    position: absolute;
+    left: 395px;
+    top: 337px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#CategorySlider 
+{
+    width: 600px;
+    height: 117px;
+    position: relative;
+    left: 0px;
+    top: 0px;     
+}
+
+div.CategoryItem {
+    width: 85px;
+    height: 117px;
+    float: left;
+    padding-left: 5px;
+}
+
+div.CategoryItemFrame {
+    width: 80px;
+    height: 117px;
+    background-repeat: no-repeat;
+    background-image: url('Images/slider/ItemFrame.png');
+    position: relative;
+    z-index: 2;
+    top: -100px;
+    left: 0px;
+    cursor: pointer;
+}
+
+div.CategoryItemFrame.selected {
+    background-image: url('Images/slider/ItemFrameSelected.png');
+}
+
+
+div.CategoryItemPhoto {
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+    position: relative;
+    top: -25px;
+    left: 5px;
+}
+
+div.CategoryItemText {
+    width: 70px;
+    height: 30px;
+    z-index: 3;
+    position: relative;
+    color: white;
+    top: 77px;
+    left: 5px;
+    text-align: center;
+}
+
+
+#CatLeftArrow
+{
+    position:absolute;
+    left:345px;
+    top:362px;
+    width:46px;
+    height:67px;
+    cursor:pointer;
+    background-image: url('Images/arrows/LArrow_disable.png');
+}
+
+#CatRightArrow
+{
+    position:absolute;
+    left:735px;
+    top:362px;
+    width:47px;
+    height:67px;
+    cursor:pointer;
+    background-image: url('Images/arrows/RArrow.png');
+}
+
+#Items {
+    width: 360px;
+    height: 80px;
+    position: absolute;
+    top: 475px;
+    left: 396px;
+}
+
+.Item 
+{
+    width: 70px;
+    height: 70px;
+    margin-left: 5px;
+    margin-right: 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: solid #c4c3bb 5px;
+    cursor: pointer;
+    float: left;
+}
+
+
+
+.Item.selected
+{
+    border: solid #2254ae 5px;
+}
+
+#Colors {
+    width: 272px;
+    height: 32px;
+    position: absolute;
+    top: 578px;
+    left: 484px;
+}
+
+#ColorLabel {
+    width: 80px;
+    height: 28px;
+    position: absolute;
+    top: 582px;
+    left: 394px;
+    font-size: 22px;
+    color: #908f89;
+    text-align: center;
+}
+
+
+.ColorItem {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 32px;
+    height: 32px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: solid #c4c3bb 3px;
+    cursor: pointer;
+    float: left;
+}
+
+.ColorItem.selected
+{
+    border: solid #2254ae 3px;
+}
+
+

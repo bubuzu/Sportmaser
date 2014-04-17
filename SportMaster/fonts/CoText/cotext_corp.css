@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'CoTextCorpBold';
+    src: url('cotext_corp.eot');
+    src: url('cotext_corp.eot') format('embedded-opentype'),
+         url('cotext_corp.woff') format('woff'),
+         url('cotext_corp.ttf') format('truetype'),
+         url('cotext_corp.svg#CoTextCorpBold') format('svg');
+}
